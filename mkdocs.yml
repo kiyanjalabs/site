@@ -1,0 +1,62 @@
+site_name: KIYANJA - MkDocs Material
+site_url: https://namespaces.gitlab.io
+theme:
+  name: material
+  font:
+    text: Merriweather Sans   # documenattion font
+    code: ABeeZee #Read Hat Mono       # code font
+  #icon:
+  #  logo: fontawesome/solid/mountain
+  logo: assets/logo-bbd-gr.png
+  favicon: assets/favicon.ico
+  features:
+    - navigation.footer
+  palette:
+  # Dark Mode
+    - scheme: slate       # Bachground color 
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green      # Menu balk background color
+      accent: deep purple  # highlight text color
+
+    # Light Mode
+    - scheme: default       # Bachground color 
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue      # Menu balk background color
+      accent: deep orange  # highlight text color
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format 
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - admonition
+  - pymdownx.details
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://youtube.com/@kiyanjalabs
+#    - icon: simple/linkedin
+#      link: https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile/a-bena-mcs-mba-phd-117b408
+
+copyright: Copyright &copy; 2025 Benaloga @ Kiyanja Labs
